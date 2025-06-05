@@ -1,6 +1,6 @@
 # BigOrangeQWQ/Bytes 
 
-# 函数来自于 http://www-graphics.stanford.edu/~seander/bithacks.html 和 https://github.com/simongog/sdsl-lite 的参考
+函数来自于 http://www-graphics.stanford.edu/~seander/bithacks.html 和 https://github.com/simongog/sdsl-lite 的参考
 
 Moonbit 对于二进制相关数据结构，算法，常量集合。
 

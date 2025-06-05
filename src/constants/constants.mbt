@@ -1,4 +1,4 @@
-pub fn lt_sel() -> FixedArray[UInt16] {
+pub let lt_sel: FixedArray[UInt16] =
   [
     0,0,1,0,2,0,1,0,3,0,1,0,2,0,1,0,
     4,0,1,0,2,0,1,0,3,0,1,0,2,0,1,0,
@@ -136,9 +136,9 @@ pub fn lt_sel() -> FixedArray[UInt16] {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7
   ]
-}
 
-pub fn lt_cnt() -> FixedArray[UInt16] {
+
+pub let lt_cnt: FixedArray[UInt16] =
   [
     0, 1, 1, 2, 1, 2, 2, 3,
     1, 2, 2, 3, 2, 3, 3, 4,
@@ -173,10 +173,10 @@ pub fn lt_cnt() -> FixedArray[UInt16] {
     4, 5, 5, 6, 5, 6, 6, 7,
     5, 6, 6, 7, 6, 7, 7, 8
   ]
-}
 
 
-pub fn lt_deBruijn_to_idx() -> FixedArray[UInt] {
+
+pub let lt_deBruijn_to_idx: FixedArray[UInt] =
   [
     0, 1, 2, 7, 3,13, 8,19,
     4,25,14,28, 9,34,20,40,
@@ -187,9 +187,9 @@ pub fn lt_deBruijn_to_idx() -> FixedArray[UInt] {
     62,11,23,32,36,44,52,55,
     61,22,43,51,60,42,59,58
   ]
-}
 
-pub fn lt_hi() ->FixedArray[UInt] {
+
+pub let lt_hi:FixedArray[UInt] =
   [
     0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3,
     4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
@@ -208,9 +208,9 @@ pub fn lt_hi() ->FixedArray[UInt] {
     7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
     7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7
   ]
-}
 
-pub fn lo_set() -> FixedArray[UInt64] {
+
+pub let lo_set: FixedArray[UInt64] =
   [    
     0x0000000000000000UL,
     0x0000000000000001UL,
@@ -278,9 +278,9 @@ pub fn lo_set() -> FixedArray[UInt64] {
     0x7FFFFFFFFFFFFFFFUL,
     0xFFFFFFFFFFFFFFFFUL
   ]
-}
 
-pub fn lo_unset() -> FixedArray[UInt64] {
+
+pub let lo_unset: FixedArray[UInt64] =
   [
     0xFFFFFFFFFFFFFFFFUL,
     0xFFFFFFFFFFFFFFFEUL,
@@ -348,11 +348,11 @@ pub fn lo_unset() -> FixedArray[UInt64] {
     0x8000000000000000UL,
     0x0000000000000000UL
   ]
-}
 
-pub fn ps_overflow() -> FixedArray[UInt64] {
+
+pub let ps_overflow: FixedArray[UInt64] =
   [
-        0x8080808080808080UL,
+    0x8080808080808080UL,
     0x7f7f7f7f7f7f7f7fUL,
     0x7e7e7e7e7e7e7e7eUL,
     0x7d7d7d7d7d7d7d7dUL,
@@ -418,9 +418,9 @@ pub fn ps_overflow() -> FixedArray[UInt64] {
     0x4141414141414141UL,
     0x4040404040404040UL
   ]
-}
 
-pub fn lt_fib() -> FixedArray[UInt64] {
+
+pub let lt_fib: FixedArray[UInt64] =
   [
         1,
     2,
@@ -515,11 +515,13 @@ pub fn lt_fib() -> FixedArray[UInt64] {
     0x68a3dd8e61eccfbdUL,
     0xa94fad42221f2702UL
   ]
-}
 
 
-pub fn lt_lo() -> FixedArray[UInt16] {
-  [    0x00,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
+pub let deBruijn64 = 0x0218A392CD3D5DBFUL
+
+pub let lt_lo: FixedArray[UInt16] =
+  [ 
+    0x00,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
     0x03,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
     0x04,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
     0x03,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
@@ -552,4 +554,3 @@ pub fn lt_lo() -> FixedArray[UInt16] {
     0x04,0x00,0x01,0x00,0x02,0x00,0x01,0x00,
     0x03,0x00,0x01,0x00,0x02,0x00,0x01,0x00
   ]
-}
