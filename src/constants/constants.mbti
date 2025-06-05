@@ -1,0 +1,31 @@
+package "BigOrangeQWQ/ByteAlgorithm/constants"
+
+// Values
+let deBruijn64 : UInt64
+
+let lo_set : FixedArray[UInt64]
+
+let lo_unset : FixedArray[UInt64]
+
+let lt_cnt : FixedArray[UInt16]
+
+let lt_deBruijn_to_idx : FixedArray[UInt]
+
+let lt_fib : FixedArray[UInt64]
+
+let lt_hi : FixedArray[UInt]
+
+let lt_lo : FixedArray[UInt16]
+
+let lt_sel : FixedArray[UInt16]
+
+let max_uint64_value : UInt64
+
+let ps_overflow : FixedArray[UInt64]
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,55 @@
+package "BigOrangeQWQ/ByteAlgorithm/bits"
+
+// Values
+fn bit(UInt64, Int) -> Bool
+
+fn cnt(UInt64) -> UInt64
+
+fn cnt01(UInt64, UInt64) -> (UInt, UInt64)
+
+fn cnt10_carry(UInt64, UInt64) -> (UInt, UInt64)
+
+fn cnt11(UInt64) -> Int
+
+fn cnt11_carry(UInt64, UInt64) -> (Int, UInt64)
+
+fn leading_one(UInt64) -> UInt
+
+fn map01(UInt64, UInt64) -> UInt64
+
+fn map10(UInt64, UInt64) -> UInt64
+
+fn read_int(Array[UInt64], Int, Int, Int) -> UInt64
+
+fn read_unary(Array[UInt64], Int, Int) -> UInt64
+
+fn reverse(UInt64) -> UInt64
+
+fn select1(UInt64, Int) -> Int
+
+fn trailing_zeros(UInt64) -> UInt
+
+fn write_int(Array[UInt64], Int, UInt64, Int, Int) -> Unit
+
+// Types and methods
+type Bit
+fn Bit::bit(Self, Int) -> Bool
+fn Bit::from(UInt64) -> Self
+fn Bit::leading_one(Self) -> UInt
+fn Bit::popcnt(Self) -> Int
+fn Bit::popcnt11(Self) -> Int
+fn Bit::reinterpret_as_double(Self) -> Double
+fn Bit::reinterpret_as_int64(Self) -> Int64
+fn Bit::reverse(Self) -> Unit
+fn Bit::select1(Self, Int) -> Int
+fn Bit::to_bool(Self) -> Bool
+fn Bit::to_byte(Self) -> Byte
+fn Bit::to_int(Self) -> Int
+fn Bit::to_uint(Self) -> UInt
+fn Bit::to_uint64(Self) -> UInt64
+fn Bit::trailing_zeros(Self) -> UInt
+
+// Type aliases
+
+// Traits
+
