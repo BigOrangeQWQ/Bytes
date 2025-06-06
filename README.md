@@ -1,4 +1,4 @@
-# BigOrangeQWQ/Bits
+# Bits
 
 Moonbit implementations for binary-related data structures, algorithms, and constant collections.
 
