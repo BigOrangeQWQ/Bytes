@@ -2,5 +2,8 @@
   "name": "BigOrangeQWQ/Bits/bits",
   "import": [
     "BigOrangeQWQ/Bits/constants"
-  ]
+  ],
+  "targets": {
+  "bits_native.mbt": ["native"]
+  }
 }

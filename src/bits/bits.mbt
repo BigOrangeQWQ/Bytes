@@ -163,8 +163,8 @@ pub fn select_nth_one(x : UInt64, idx : Int) -> Int {
 /// ```
 ///
 pub fn leading_one(x : UInt64) -> UInt {
-  let mut tt = x >> 32
-  let mut t : UInt64 = 0UL
+  let mut tt = (x >> 32)
+  let mut t : UInt64 = 0
   if tt != 0 {
     t = tt >> 16
     if t != 0 {
@@ -183,7 +183,7 @@ pub fn leading_one(x : UInt64) -> UInt {
       }
     }
   } else {
-    t = x >> 16
+    t = (x >> 16)
     if t != 0 {
       tt = t >> 8
       if tt != 0 {
@@ -235,18 +235,6 @@ pub fn trailing_zeros(x : UInt64) -> UInt {
   }
   if (x & 1) == 1 {
     return 0
-  }
-  if (x & 3) == 1 {
-    return 1
-  }
-  if (x & 7) == 1 {
-    return 2
-  }
-  if (x & 0x7FF) == 1 {
-    return 3 +
-      @constants.lt_lo[((x & 0x7FF) >> 3).to_int()]
-      .to_int()
-      .reinterpret_as_uint()
   }
   return @constants.lt_deBruijn_to_idx[((
       (x & (x.lnot() + 1)) * @constants.deBruijn64
@@ -385,8 +373,8 @@ pub fn count_11_pairs_with_carry(x : UInt64, carry : UInt64) -> (Int, UInt64) {
 /// ```
 ///
 pub fn count_10_pairs(x : UInt64, carry : UInt64) -> (Int, UInt64) {
-  let res = popcnt((x ^ ((x << 1) | carry)) & x.lnot())
-  (res.to_int(), x >> 63)
+  let res = ((x ^ ((x << 1) | carry)) & x.lnot()).popcnt()
+  (res, x >> 63)
 }
 
 ///|
@@ -443,8 +431,8 @@ pub fn extract_10_pairs(x : UInt64, carry : UInt64) -> UInt64 {
 /// ```
 ///
 pub fn count_01_pairs(x : UInt64, carry : UInt64) -> (Int, UInt64) {
-  let res = popcnt((x ^ ((x << 1) | carry)) & x)
-  (res.to_int(), x >> 63)
+  let res = ((x ^ ((x << 1) | carry)) & x).popcnt()
+  (res, x >> 63)
 }
 
 ///|
@@ -605,20 +593,21 @@ pub fn read_bits(
 /// }
 /// ```
 ///
-pub fn read_unary(word : Array[UInt64], idx : Int, offset : Int) -> UInt {
+pub fn read_unary(word : Array[UInt64], idx : Int, offset : Int) -> Int {
   let w = word[idx] >> offset
+
   if w != 0 {
-    return trailing_zeros(w)
+    return w.ctz()
   } else {
     let w = word[idx + 1]
     if w != 0 {
-      return trailing_zeros(w) + 64 - offset.reinterpret_as_uint()
+      return w.ctz() + 64 - offset
     }
     for cnt in (idx + 2)..<word.length() {
       if word[cnt] != 0 {
-        return trailing_zeros(word[cnt]) +
-          (cnt << 6).reinterpret_as_uint() -
-          offset.reinterpret_as_uint()
+        return word[cnt].ctz() +
+          (cnt << 6) -
+          offset
       }
     }
   }
