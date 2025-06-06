@@ -1,6 +1,6 @@
 {
-  "name": "BigOrangeQWQ/ByteAlgorithm/bits",
+  "name": "BigOrangeQWQ/Bits/bits",
   "import": [
-    "BigOrangeQWQ/ByteAlgorithm/constants"
+    "BigOrangeQWQ/Bits/constants"
   ]
 }

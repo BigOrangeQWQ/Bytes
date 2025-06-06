@@ -1,10 +1,10 @@
 {
-  "name": "BigOrangeQWQ/ByteAlgorithm",
+  "name": "BigOrangeQWQ/Bits",
   "version": "0.1.0",
   "readme": "README.md",
   "repository": "",
   "license": "Apache-2.0",
-  "keywords": [],
-  "description": "",
+  "keywords": ["bits", "bytes", "algorithm", "bitwise operations"],
+  "description": "Moonbit implementations for binary-related data structures, algorithms, and constant collections.",
   "source": "src"
 }
